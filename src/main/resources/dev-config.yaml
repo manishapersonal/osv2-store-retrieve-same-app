@@ -1,0 +1,7 @@
+http:
+  host: "127.0.0.1"
+  port: "8085"
+  store_path: "/osv2Store"
+  retrieve_path: "/osv2Retrieve"
+  readTimeout: "30000"
+  

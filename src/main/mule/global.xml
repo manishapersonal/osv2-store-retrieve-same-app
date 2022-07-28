@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:os="http://www.mulesoft.org/schema/mule/os"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
+http://www.mulesoft.org/schema/mule/http 
+http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
+http://www.mulesoft.org/schema/mule/core 
+http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd">
+	<http:listener-config name="HTTP_Listener_config"
+		doc:name="HTTP Listener config"
+		doc:id="a0a37971-fd7f-4382-8b5e-0f6a7396227b">
+		<http:listener-connection host="0.0.0.0"
+			port="${http.port}" readTimeout="${http.readTimeout}"/>
+	</http:listener-config>
+	<os:object-store name="OSV2" doc:name="OSV2" doc:id="a59cbb70-2ebc-43b0-8e33-ad314ca95b95" />
+	<configuration-properties doc:name="Configuration properties" doc:id="36b328c5-fadc-4725-9677-1bdfc5e359d6" file="${env}-config.yaml" />
+
+</mule>
