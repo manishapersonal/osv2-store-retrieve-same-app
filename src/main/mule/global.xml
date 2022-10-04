@@ -17,7 +17,8 @@ http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/cu
 		<http:listener-connection host="0.0.0.0"
 			port="${http.port}" readTimeout="${http.readTimeout}"/>
 	</http:listener-config>
-	<os:object-store name="OSV2" doc:name="OSV2" doc:id="a59cbb70-2ebc-43b0-8e33-ad314ca95b95" />
+	<os:object-store name="osv2Persistent" doc:name="osv2Persistent" doc:id="a59cbb70-2ebc-43b0-8e33-ad314ca95b95" />
+	<os:object-store name="osv2Transient" doc:name="osv2Transient" doc:id="dd713eb8-46fb-4801-8fc0-1f2e2fe8c986" persistent="false"/>
 	<configuration-properties doc:name="Configuration properties" doc:id="36b328c5-fadc-4725-9677-1bdfc5e359d6" file="${env}-config.yaml" />
 
 </mule>
